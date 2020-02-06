@@ -47,6 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="1С 77\1c_data exchange.ert" />
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
