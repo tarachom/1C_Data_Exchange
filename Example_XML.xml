@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root 
+  datetime="" 
+  guid="" 
+  fileback="" 
+  cmd=""
+>
+  
+  <!-- 
+  datetime="00.00.0000 00:00:00"
+  guid="0ab9eb83-574a-435d-836a-b2fb41a94897"
+  fileback="0ab9eb83-574a-435d-836a-b2fb41a94897"
+  cmd="TEST"
+  -->
+  
+  <var name="var1"><![CDATA[text]]></var>
+  <var name="var2"><![CDATA[text]]></var>
+  <var name="var3"><![CDATA[text]]></var>
+
+</root>
