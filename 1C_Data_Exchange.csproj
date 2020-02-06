@@ -54,6 +54,7 @@
   <ItemGroup>
     <Content Include="1С 77\README.txt" />
     <Content Include="Example_XML.xml" />
+    <Content Include="first.xslt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
