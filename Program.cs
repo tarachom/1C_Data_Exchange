@@ -80,6 +80,11 @@ namespace _1C_Data_Exchange
 				if (context != null)
 				{
 					HttpListenerRequest request = context.Request;
+					
+					foreach (string key in request.QueryString.AllKeys)
+					{
+						Console.WriteLine(key + " = " + request.QueryString[key].ToString());
+					}					
 
 					if (request.HttpMethod == "POST")
 					{
@@ -102,18 +107,18 @@ namespace _1C_Data_Exchange
 							string key = kvPair[0];
 							string value =  HttpUtility.UrlDecode(kvPair[1]);
 							postParams.Add(key, value);
-
 							Console.WriteLine(key + " = " + value);
 						}
 					}
+
+					
 
 					HttpListenerResponse response = context.Response;
 
 					string responseString =
 						"<HTML><BODY>" + "" +
-					"<form method=\"post\">First name: <input type=\"text\" name=\"firstname\" /><br />Last name: <input type=\"text\" name=\"lastname\" /><input type=\"submit\" value=\"Submit\" /></form>" +
-					"<form method =\"post\" enctype=\"multipart/form-data\"><input id=\"fileUp\" name=\"fileUpload\" type=\"file\" /><input type=\"submit\" /></form>" +
-					"</BODY></HTML>";
+					    "<form method=\"post\">First name: <input type=\"text\" name=\"firstname\" /><br />Last name: <input type=\"text\" name=\"lastname\" /><input type=\"submit\" value=\"Submit\" /></form>" +
+					    "</BODY></HTML>";
 
 					byte[] buffer = Encoding.UTF8.GetBytes(responseString);
 
